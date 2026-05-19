@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Session</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Book Gaming Session</h1>
+</header>
+
+<nav>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="booking.html">Booking</a>
+  <a href="tournaments.html">Tournaments</a>
+</nav>
+
+<section class="forms-section">
+
+  <div class="form-box">
+
+    <h2>Reserve Your Session</h2>
+
+    <form id="bookingForm">
+
+      <input type="date" id="bookingDate" required>
+
+      <select id="bookingTime">
+
+        <option>10:00 AM</option>
+        <option>11:00 AM</option>
+        <option>12:00 PM</option>
+        <option>1:00 PM</option>
+        <option>2:00 PM</option>
+
+      </select>
+
+      <select id="bookingDuration">
+
+  <option>30 Minutes</option>
+  <option>1 Hour</option>
+  <option>2 Hours</option>
+
+</select>
+
+<hr>
+
+<h3 style="color:#00ff99; margin-top:15px;">
+  Add Payment Card
+</h3>
+
+<input type="text" placeholder="Card Number">
+<input type="text" placeholder="Expiry Date">
+<input type="text" placeholder="CVV">
+
+<button onclick="openModal('Card Saved', 'Your payment card has been securely saved for fast checkout.')">
+  Save Card
+</button>
+
+<button class="pay-btn" onclick="openModal('Payment', 'Secure payment is being processed. Please wait...')">
+  Pay Now
+</button>
+
+<button type="submit">
+  Book Session
+</button>
+
+      <button type="submit">
+        Book Session
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<section class="dashboard">
+
+  <h2>Booked Sessions</h2>
+
+  <div id="bookingList"></div>
+
+</section>
+
+<script src="script.js"></script>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2 id="modalTitle">Title</h2>
+
+    <p id="modalText">Text goes here...</p>
+
+  </div>
+
+</div>
+
+</body>
+</html>

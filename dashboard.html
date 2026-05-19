@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Gaming Dashboard</h1>
+</header>
+
+<nav>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="booking.html">Booking</a>
+  <a href="tournaments.html">Tournaments</a>
+  <a href="admin.html">Admin</a>
+</nav>
+
+<section class="dashboard" style="display:block;">
+
+  <h2 id="welcomeText"></h2>
+
+  <div class="session-timer">
+  Session Time: <span id="time">00:00:00</span>
+</div>
+
+  <div class="dashboard-menu">
+
+    <div class="dashboard-card">
+      <h3>PS Remote Play</h3>
+      <p>Manage gaming sessions remotely.</p>
+      <a href="https://remoteplay.dl.playstation.net/remoteplay/" target="_blank">
+  <button>
+    Open PS Remote Play
+  </button>
+</a>
+
+<button onclick="launchSession()">
+  Launch Game Session
+</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h3>Add Payment Card</h3>
+
+      <input type="text" placeholder="Card Number">
+      <input type="text" placeholder="Expiry Date">
+      <input type="text" placeholder="CVV">
+
+     <button onclick="saveCard()">
+  Save Card
+</button>
+
+    <div class="dashboard-card">
+      <h3>Contact Scott McCall</h3>
+
+      <p>Phone: +27 71 673 9120</p>
+      <p>Email: scottmccall0212@gmail.com</p>
+      <p>Mpumalanga, Cunningmore A</p>
+    </div>
+
+  </div>
+
+  <button class="logout-btn" onclick="logout()">
+    Logout
+  </button>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
